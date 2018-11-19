@@ -1,0 +1,85 @@
+.movie-detail-content {
+    width: 75%;
+
+}
+
+.movie-detail-partA {
+    
+}
+
+.movie-detail-poster {
+    width: 450px;
+    height: 675px;
+}
+
+.movie-detail-text {
+    height: 675px;
+}
+
+.movie-detail-text-content {
+    height: 100%;
+}
+
+.movie-title-name {
+    display: flex;
+    align-items: flex-end;
+}
+
+.movie-title-name h2 {
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+}
+
+.movie-title-name span {
+    margin: 0;
+    padding: 0;
+}
+
+.movie-detail-type div p {
+    padding: 0;
+    margin: 0;
+}
+
+.movie-detail-photo-content {
+   max-width: 100%;
+    
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+@media screen and(max-width: 1140px){
+
+}
+
+.movie-detail-partB {
+    width: 100%;
+    height: 80vh;
+}
+
+.movie-detail-brief {
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+    color:#C4A835;
+    font-family: 'Microsoft JhengHei', 'Times New Roman', Times, serif;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix{
+    clear: both;
+}
+#all{
+    width: 100%;
+}
+
+/* 背景圖片 */
+#cinema-index{
+    background-image: url('../img/04-bg/background-img-01.jpg');
+    background-size: cover;
+    background-position: center;    
+}
+#movie-intro{
+    background-image: url('../img/04-bg/background-img-02.jpg');
+    background-size: cover;
+    background-position: center;  
+    
+}
+
+
+
+/* 訂票 */
+.quick-booking-wrap{
+    position: fixed;
+    left:calc(100% - 40px);
+    top:8vh;
+    width:340px;
+    height:87vh;
+    z-index: 9999;
+}
+@media only screen and (max-width: 576px)
+{
+    .quick-booking-wrap{
+        display: none;
+    }
+}
+
+.quick-booking{
+    width: 40px;
+    height: 30vh; 
+    margin-top:15%;
+    float:left;
+    position: relative;
+    background-color: black;
+}
+.quick-booking-button{
+    position: absolute;
+    top:25%;
+    width: 100%;
+    height: 150px;
+    writing-mode: vertical-lr !important;
+    background-color:#1A1A1A;
+    border:none;
+}
+
+.quick-booking-content{
+    width:300px;
+    height: 87vh;
+    float:right;
+    background-color:gray;
+}
+
+.quick-booking-img{
+    max-width: 70%;
+    margin-left:15%;
+}
+.booking-time{
+    width: 25%;
+}
+
+.booking-button{
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+
+#close_booking {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+    display: none;
+    z-index: 2;
+}
+
+
+/* nav */
+
+.cinema-nav{
+    width: 100%; 
+    height:8vh;
+    
+}
+.nav-bgc{
+    background-color:#151415 ;
+    opacity: 0.8 ;
+}
+
+.nav-textColor{
+    color:#C4A835 !important;
+}
+
+
+
+
+/* 占滿一整頁 */
+.page-full{
+    width: 100%;
+    height: 100vh;
+}
+
+/* 內容顯示 */
+
+.content-range{
+    width:75%;
+    height:87vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* banner */
+.banner-content-range{
+    width:75%;
+    height:87vh;
+    margin-right: auto;
+    margin-left: auto
+}
+.banner-wrap{
+    max-width: 70%;
+    height:auto;
+
+}
+
+.swiper1{
+   box-shadow:0px 0px 80px white;
+  
+}
+
+.swiper-pagination-bullet{
+    border-radius: 0 !important;
+    width: 8% !important;
+    background: white!important;
+}
+
+.swiper-pagination-bullet-active {
+   
+    background-color: #C4A835 !important;
+  }
+
+.banner-img{
+    max-width: 100%;
+   
+}
+
+@media only screen and (max-width: 1000px){
+    #banner-img1{
+        content:url("../img/01-poster/01-movie/already/a\ star\ is\ born-01.jpg");
+    }
+    #banner-img2{
+        content:url("../img/01-poster/01-movie/already/bohemian-01.jpg");
+    }
+    #banner-img3{
+        content:url("../img/01-poster/01-movie/already/dear\ ex-01.jpg");
+    }
+    #banner-img4{
+        content:url("../img/01-poster/01-movie/already/first\ man-01.jpg");
+    }
+    .swiper1{
+        max-width: 90%;
+    }
+    .banner-content-range{
+        width:100%;
+      }
+ 
+}
+
+/* 內容標題 */
+.content-title{
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-title h2{
+    margin: 0;
+    padding:0;
+}
+
+
+/* 電影swiper內容 */
+.move-content-range{
+    width:1200px;
+    height:87vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+#home-tab.active{
+    font-size: 20pt;
+    text-decoration-line: underline;
+}
+#profile-tab.active{
+    font-size: 20pt;
+    text-decoration-line: underline;
+}
+@media only screen and (max-width: 1200px){
+    .move-content-range{
+        width:900px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .move-content-range{
+        width:600px;
+    }
+}
+
+.movie-textColor{
+    color:#C4A835;
+}
+.movie-poster-photo{
+    max-width:100%;
+}
+@media only screen and (max-width: 600px){
+    .move-content-range{
+        width: auto;
+    }
+    .movie-poster-photo{
+        width: 242px;
+        height:364px;
+    }
+    .stick{
+        display: none;
+    }
+    .stick-arrow-left:before{
+        display: none;
+    }
+    .stick-arrow-right:before{
+        display: none;
+    }
+    
+}
+
+.stick{
+    width:6%;
+    height:100%;
+    position: absolute;
+    z-index: 99;
+    background-color:black;
+    opacity: 0.8;
+}
+.stick-left{
+    top:0;
+    left: 0;
+}
+.stick-right{
+    top:0;
+    right:0;
+}
+.stick-arrow-left{
+    position: absolute;
+    color:#C4A835;
+    z-index: 999;
+    left:3%;
+    top:50%;
+    transform: translate(-50% , -50%);
+   
+}
+.stick-arrow-left:active{
+    color:white;
+ 
+}
+
+.stick-arrow-right{
+    position: absolute;
+    color:#C4A835;
+    z-index: 999;
+    right:3%;
+    top:50%;
+    transform: translate(50% , -50%);
+ 
+}
+.stick-arrow-right:active{
+    color:white;
+}
+
+
+/* 場次查詢 */
+
+
+.quick-serach{
+    width: 100%;
+
+}
+.quick-serach-title{
+    width: 100%;
+    height:5vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.quick-serach-title h3{
+    padding:0;
+    margin: 0;
+}
+
+/* 場次查詢內容 */
+.quick-serach-content{
+    width:100%;
+    height:22vh;
+}
+
+
+.btn-group{
+    width:277px;
+    height:29px;
+}
+
+.quick-serach-button{
+    width: 121px;
+    height: 72px;
+}
+
+
+/* 會員申辦member */
+
+#cinema-member{
+    background-image: url("../img/04-bg/background-img-02.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.cinema-member-content{
+    margin-right: auto;
+    margin-left: auto;
+    width:75%;
+    height: 87vh;
+}
+
+@media only screen and (max-width: 991px){
+
+    .cinema-member-content{
+        height:auto;
+    }
+    #member-img1{
+        content:url("../img/member\ area-16.png");
+    }
+}
+
+
+
+.member-wrap{
+    max-width: 70%;
+}
+.member-img{
+    max-width:100%;
+}
+
+.member-item{
+    background-color:blueviolet;
+    height: 10vh;
+    font-size:20pt;
+}
+
+
+
+
+/* 影城介紹 */
+#cinema-intro{
+    background-image: url("../img/04-bg/background-img-02.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.cinema-intro-content{
+    width:75%;
+    height:87vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+.cinema-img{
+    max-width:400px;
+    margin-left:calc(50% - 200px);
+}
+
+.cinema-text{
+     max-width:400px;
+     height:232px;
+    text-align: justify;
+    letter-spacing:2px;
+    font-size: 1rem;
+   
+}
+.cinema-info{
+    max-width:400px;
+    height:232px;
+}
+
+
+@media only screen and (max-width: 1352px)
+{
+    .cinema-img{
+        max-width:300px;
+        margin-left:calc(50% - 150px);
+    }
+    
+    .cinema-text{
+         max-width:300px;
+         height:174px;
+         overflow: scroll;
+    
+    }
+    .cinema-info{
+        max-width:300px;
+        height:174px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .cinema-intro-content{
+        height:auto;
+    }
+    .cinema-fb{
+        display: none;
+    }
+}
+
+.cinema-footer{
+    height: 5vh;
+    width: 100%;
+    background-color:rgb(36, 33, 33);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color:whitesmoke;
+}
+.cinema-footer p{
+    padding:0;
+    margin:0;
+    line-height: 5vh;
+}
+

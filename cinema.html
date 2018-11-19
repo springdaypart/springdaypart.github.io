@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/bootstrap-4.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/fontawesome-free-5.5.0-web/fontawesome-free-5.5.0-web/css/all.min.css">
+    <link rel="stylesheet" href="style/swiper-4.4.2/swiper-4.4.2/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="style/bootstrap-4.1.1-dist/css/bootstrap.min.css.map">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 影城介紹 -->
+    <div id="cinema-intro">
+        <!-- 快速訂票區域 -->
+        <div class="quick-booking-wrap">
+            <!-- 快速訂票按鈕 -->
+            <div class="quick-booking">
+                <button type="button" onclick="bookingTicket();" class="quick-booking-button">我要訂票</button>
+            </div>
+            <!-- 快速訂票內容 -->
+            <div class="quick-booking-content">
+                <!-- 按鈕+下拉式選單 -->
+                <div class="dropdown d-flex justify-content-center flex-wrap mt-5">
+                    <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ---請選擇電影---
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                    <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ---請選擇日期---
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+                <!-- 訂票電影海報 -->
+                <img class="quick-booking-img mb-5 " src="img/01-poster/01-movie/halloween-01.jpg" alt="">
+                <!-- 訂票時刻 -->
+                <div class="quick-booking-time d-flex flex-wrap mb-5 text-center">
+                    <div class="booking-time">5:20</div>
+                    <div class="booking-time">5:20</div>
+                    <div class="booking-time">5:20</div>
+                    <div class="booking-time">5:20</div>
+                    <div class="booking-time">5:20</div>
+                    <div class="booking-time">5:20</div>
+                    <div class="booking-time">5:20</div>
+                </div>
+                <!-- 訂票按鈕 -->
+                <button id="button_yes" onclick="alert('是否確認定票?')" type="button" class="btn btn-primary booking-button">點我訂票</button>
+            </div>
+        </div>
+        <!-- 黑畫面 點到關閉 -->
+        <div id="close_booking"></div>
+
+
+       <!-- navbar -->
+       <div class="cinema-nav" >
+            <nav class="navbar navbar-expand-lg p-0 navbar-light " style="background-color:rgba(21,20,21,0.8); z-index: 99999;">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span><i class="fas fa-bars fa-2x"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <!-- 寬度設為60% -->
+                    <ul class="navbar-nav d-flex justify-content-around align-items-center mx-auto" style="width: 60%;">
+                        <!-- 每個item都+下拉式選單類別 -->
+                        <!-- logo -->
+                        <a class="" href="index.html"><img src="img/03-icon/logo.png" style="max-width:120px; height:auto;" alt=""></a>
+                        <li class="nav-item">
+                            <a class="nav-link text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                                電影介紹
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                                卡友專區
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                                戲院介紹
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown ml-3 ml-lg-0">
+                            <a class="nav-link dropdown-toggle text-center nav-textColor" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                其他連結
+                            </a>
+                            <div class="dropdown-menu" style=" background-color:#151415 ;" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item nav-textColor" href="https://www.facebook.com/pages/category/Movie-Theater/%E5%BD%B0%E5%8C%96%E5%A4%A7%E6%88%B2%E9%99%A2-1374522819332474/"
+                                    target="_blank">Facebook</a>
+                                <a class="dropdown-item nav-textColor" href="http://www.twcinema.com.tw/index.html" target="_blank">台灣大戲院</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+              </nav>
+        </div>
+
+
+
+        <div class="cinema-intro-content">
+            <div id="cinema-history-content" class="mx-auto w-75">
+                <div class="content-title">
+                    <h2>戲院介紹</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-12"><img class="cinema-img " src="img/theater-outside.jpg" alt=""></div>
+                    <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                        <p class="cinema-text mx-auto">彰化戲院成立至今已有30年，由當初兩廳改成現在的金.銀.財.寶共有四廳，經過不斷的裝修及增加的客人眼睛一亮，原來電影院也可以這麼乾淨尤其化粧室甚至比家裡的還乾淨.漂亮，為了回饋彰化的觀眾，定於9月下旬增設3D立體電影，讓喜歡嚐鮮的朋友不用跑到台中消費了，因為我們彰化戲院已經跟台中市同步開跑了，附近還有許多特色小吃，例如：阿璋肉圓等等......
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="contact-method-content" class="mx-auto w-75">
+                <div class="content-title">
+                    <h2>聯絡方式</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-12"><iframe class="cinema-img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.6410025612245!2d120.53686999951644!3d24.07894355971205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469389ae9bfecdf%3A0x96a0cd35b39234d2!2zNTAw5b2w5YyW57ij5b2w5YyW5biC5Lit5q2j6Lev5LqM5q61MTUz6Jmf!5e0!3m2!1szh-TW!2stw!4v1542340790854"
+                            width="400" height="232" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    <div class="col-lg-6 col-12">
+                        <div class="cinema-info mx-auto">
+                            <div>
+                                <h4 class="float-left mr-3 ">電話</h4>
+                                <p class="float-left">(04)-725-5669</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div>
+                                <h4 class="float-left mr-3">地址</h4>
+                                <p class="float-left">彰化市中正路2段153號3樓</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <iframe class="cinema-fb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E5%25BD%25B0%25E5%258C%2596%25E5%25A4%25A7%25E6%2588%25B2%25E9%2599%25A2-1374522819332474%2F&tabs=timeline&width=300&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                                width="300" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                                allowTransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cinema-footer">
+            <p>業成資訊有限公司-春日部防衛隊。COPYRIGHT©2018</p>
+        </div>
+    </div>
+
+
+
+
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="style/bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="style/fontawesome-free-5.5.0-web/fontawesome-free-5.5.0-web/js/all.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script src="style/swiper-4.4.2/swiper-4.4.2/dist/js/swiper.min.js"></script>
+</body>
+
+</html>

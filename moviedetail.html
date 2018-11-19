@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/moviedetail.css">
+    <link rel="stylesheet" href="style/bootstrap-4.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/fontawesome-free-5.5.0-web/fontawesome-free-5.5.0-web/css/all.min.css">
+    <link rel="stylesheet" href="style/swiper-4.4.2/swiper-4.4.2/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="style/bootstrap-4.1.1-dist/css/bootstrap.min.css.map">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="all">
+        <!--影片詳細介紹-->
+        <div id="movie-detail">
+
+             <!-- 快速訂票區域 -->
+             <div class="quick-booking-wrap">
+                    <!-- 快速訂票按鈕 -->
+                    <div class="quick-booking">
+                        <button type="button" onclick="bookingTicket();" class="quick-booking-button">我要訂票</button>
+                    </div>
+                    <!-- 快速訂票內容 -->
+                    <div class="quick-booking-content">
+                        <!-- 按鈕+下拉式選單 -->
+                        <div class="dropdown d-flex justify-content-center flex-wrap mt-5">
+                            <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ---請選擇電影---
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+    
+                            <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ---請選擇日期---
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                        <!-- 訂票電影海報 -->
+                        <img class="quick-booking-img mb-5 " src="img/01-poster/01-movie/halloween-01.jpg" alt="">
+                        <!-- 訂票時刻 -->
+                        <div class="quick-booking-time d-flex flex-wrap mb-5 text-center">
+                            <div class="booking-time">5:20</div>
+                            <div class="booking-time">5:20</div>
+                            <div class="booking-time">5:20</div>
+                            <div class="booking-time">5:20</div>
+                            <div class="booking-time">5:20</div>
+                            <div class="booking-time">5:20</div>
+                            <div class="booking-time">5:20</div>
+                        </div>
+                        <!-- 訂票按鈕 -->
+                        <button id="button_yes"  onclick="alert('是否確認定票?')" type="button" class="btn btn-primary booking-button">點我訂票</button>
+                    </div>
+                </div>
+                <!-- 黑畫面 點到關閉 -->
+                <div id="close_booking"></div>
+
+
+           <!-- navbar -->
+        <div class="cinema-nav" >
+                <nav class="navbar navbar-expand-lg p-0 navbar-light " style="background-color:rgba(21,20,21,0.8); z-index: 99999;">
+    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span><i class="fas fa-bars fa-2x"></i></span>
+                    </button>
+    
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <!-- 寬度設為60% -->
+                        <ul class="navbar-nav d-flex justify-content-around align-items-center mx-auto" style="width: 60%;">
+                            <!-- 每個item都+下拉式選單類別 -->
+                            <!-- logo -->
+                            <a class="" href="index.html"><img src="img/03-icon/logo.png" style="max-width:120px; height:auto;" alt=""></a>
+                            <li class="nav-item">
+                                <a class="nav-link text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                                    電影介紹
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                                    卡友專區
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link  text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                                    戲院介紹
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown ml-3 ml-lg-0">
+                                <a class="nav-link dropdown-toggle text-center nav-textColor" href="#" id="navbarDropdownMenuLink"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    其他連結
+                                </a>
+                                <div class="dropdown-menu" style=" background-color:#151415 ;" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item nav-textColor" href="https://www.facebook.com/pages/category/Movie-Theater/%E5%BD%B0%E5%8C%96%E5%A4%A7%E6%88%B2%E9%99%A2-1374522819332474/"
+                                        target="_blank">Facebook</a>
+                                    <a class="dropdown-item nav-textColor" href="http://www.twcinema.com.tw/index.html" target="_blank">台灣大戲院</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                  </nav>
+            </div>
+
+
+            <!-- 電影介紹頁面 -->
+            <div class="movie-detail-content mx-auto">
+                <!-- A部分 -->
+                <div class="movie-detail-partA pt-3">
+                    <!-- A部分內容 -->
+                    <div class="detail-partA-content  row flex-lg-nowrap m-0 ">
+                        <!-- 海報 -->
+                        <img class="movie-poster-img m-lg-0 mx-auto  " src="img/01-poster/01-movie/already/the scoundrels-01.jpg"
+                            alt="">
+                        <!-- 細項說明 -->
+                        <div class="detail-partA-text mx-auto mt-lg-0 mt-4 col-lg-7 col-12">
+                            <!-- 第一段 純文字 -->
+                            <div class="detail-partA-title d-flex align-items-end mb-2">
+                                <h2 class="m-0 ">月光光心慌慌</h2><span>HALLOWEEN</span>
+                            </div>
+                            <div class="detail-partA-type d-flex flex-wrap">
+                                <p class="w-50 m-0 mb-3 pr-4">類型：懸疑、驚悚、恐怖</p>
+                                <p class="w-50 m-0 mb-3 pr-4">片名：月光光新慌慌</p>
+                                <p class="w-50 m-0 mb-3 pr-4">導演：大衛高登格林</p>
+                                <p class="w-50 m-0 mb-3 pr-4">片長：1小時50分</p>
+                                <p class="w-50 m-0 mb-3 pr-4">主演：潔美李寇蒂斯、威爾培頓、茱蒂吉兒</p>
+                                <p class="w-50 m-0 mb-3 pr-4">上映日期：2018/11/02</p>
+                            </div>
+
+                            <!-- 第二段 劇照 -->
+                            <div class="detail-partA-title mt-5">
+                                <h3>劇照</h3>
+                            </div>
+                            <div class="detail-partA-photo ">
+                                <!-- Swiper -->
+                                <div class="swiper-container position-relative" >
+                                    <div class="swiper-wrapper ">
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/stills-01.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/stills-02.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/stills-03.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/stills-04.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/stills-03.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/stills-02.jpg"
+                                                alt=""></div>
+
+                                    </div>
+                                    <!-- Add Arrows -->
+                                    <i class="fas fa-angle-right fa-3x arrow-left"></i>
+                                    <i class="fas fa-angle-left  fa-3x arrow-right"></i>
+                                    <!-- Add Pagination -->
+                                    <!-- <div class="swiper-pagination"></div> -->
+                                </div>
+                            </div>
+
+
+                            <!-- 第三段 時刻表 -->
+                            <div class="detail-partA-title mt-5">
+                                <h3>時刻表</h3>
+                            </div>
+                            <div class="detail-partA-time-wrap row">
+                                <div class="col-2">
+                                    <div class="mb-3 text-center">平日</div>
+                                    <div class="text-center">假日</div>
+                                </div>
+                                <div class="detail-partA-time col-10 d-flex flex-wrap">
+                                    <div class="partA-time mb-3 text-center"><span>5:20</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>5:20</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>5:20</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>5:20</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>5:20</span></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </div>
+
+                <!-- B部分內容 -->
+                <div class="movie-detail-partB">
+                    <div class="detail-partB-title mt-4">
+                        <h3>劇情簡介</h3>
+                    </div>
+                    <p>潔美李寇蒂斯回鍋飾演經典角色洛莉斯特羅德，她在40年前的萬聖夜驚險逃出麥克邁爾斯的魔掌，但可怕夢魘一直揮之不去，現在她將再度遭遇這位面具殺人犯。</p>
+
+
+                   
+                        <div class="embed-responsive embed-responsive-16by9 mb-5">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/b7xuzcQ2PLM"></iframe>
+
+                        
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- footer -->
+            <div class="cinema-footer">
+                <p>業成資訊有限公司-春日部防衛隊。COPYRIGHT©2018</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="style/bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="style/fontawesome-free-5.5.0-web/fontawesome-free-5.5.0-web/js/all.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script src="style/swiper-4.4.2/swiper-4.4.2/dist/js/swiper.min.js"></script>
+    <!-- 訂票的 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="js/booking.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            // init: false,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                990: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                450: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                },
+
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
+    
+</body>
+
+
+
+</html>
