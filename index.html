@@ -40,8 +40,8 @@
 <body>
     <!-- 戲院首頁-->
     <div id="cinema-index" class="page-full">
-        <!-- 快速訂票區域 -->
-        <div class="quick-booking-wrap">
+       <!-- 快速訂票區域 -->
+       <div class="quick-booking-wrap">
             <!-- 快速訂票按鈕 -->
             <div class="quick-booking">
                 <button type="button" onclick="bookingTicket();" class="quick-booking-button">我要訂票</button>
@@ -49,40 +49,53 @@
             <!-- 快速訂票內容 -->
             <div class="quick-booking-content">
                 <!-- 按鈕+下拉式選單 -->
-                <div class="dropdown d-flex justify-content-center flex-wrap mt-5">
-                    <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ---請選擇電影---
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown mt-5">
+                    <div class="btn-group mb-5 w-100 " role="group" aria-label="Basic example">
+                        <button class="btn   dropdown-toggle mx-auto p-0 px-4" type="button" id="dropdownMenuMovie"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#1A1A1A;border:#C4A835 1px solid;">
+                            ---請選擇電影---
+                        </button>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuMovie">
+                            <a class="dropdown-item" href="#">誰先愛上他的</a>
+                            <a class="dropdown-item" href="#">鬼靈精</a>
+                            <a class="dropdown-item" href="#">怪獸與葛林戴華德的罪行 </a>
+                            <a class="dropdown-item" href="#">大君主行動</a>
+                        </div>
                     </div>
-                    <button class="btn btn-secondary dropdown-toggle mb-5" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        ---請選擇日期---
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+
+                    <div class="btn-group w-100 mb-5" role="group" aria-label="Basic example">
+                        <button class="btn dropdown-toggle mx-auto  p-0 px-4" type="button" id="dropdownMenuDate"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:#1A1A1A;border:#C4A835 1px solid;">
+                            ---請選擇日期---
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuDate">
+                            <a class="dropdown-item" href="#">11/22(二)</a>
+                            <a class="dropdown-item" href="#">11/23(三)</a>
+                            <a class="dropdown-item" href="#">11/24(四)</a>
+                            <a class="dropdown-item" href="#">11/25(五)</a>
+                            <a class="dropdown-item" href="#">11/26(六)</a>
+                            <a class="dropdown-item" href="#">11/27(日)</a>
+                        </div>
                     </div>
                 </div>
+
                 <!-- 訂票電影海報 -->
                 <img class="quick-booking-img mb-5 " src="img/01-poster/01-movie/halloween-01.jpg" alt="">
                 <!-- 訂票時刻 -->
-                <div class="quick-booking-time d-flex flex-wrap mb-5 text-center">
-                    <div class="booking-time">5:20</div>
-                    <div class="booking-time">5:20</div>
-                    <div class="booking-time">5:20</div>
-                    <div class="booking-time">5:20</div>
-                    <div class="booking-time">5:20</div>
-                    <div class="booking-time">5:20</div>
-                    <div class="booking-time">5:20</div>
+                <div class="quick-booking-time d-flex flex-wrap mb-5 text-center justify-content-center">
+                    <div class="booking-time m-1">12:40</div>
+                    <div class="booking-time m-1">13:50</div>
+                    <div class="booking-time m-1">15:00</div>
+                    <div class="booking-time m-1">16:10</div>
+                    <div class="booking-time m-1">17:20</div>
+                    <div class="booking-time m-1">18:30</div>
+                    <div class="booking-time m-1">19:40</div>
+                    <div class="booking-time m-1">20:50</div>
+
                 </div>
                 <!-- 訂票按鈕 -->
-                <button id="button_yes" onclick="alert('是否確認定票?')" type="button" class="btn btn-primary booking-button">點我訂票</button>
+                <button id="button_yes" onclick="alert('是否確認訂票?')" type="button" class="btn booking-button" style="background-color:#C4A835; color:#1A1A1A;">確認訂票</button>
             </div>
         </div>
         <!-- 黑畫面 點到關閉 -->
@@ -91,7 +104,7 @@
 
         <!-- navbar -->
         <div class="cinema-nav" >
-            <nav class="navbar navbar-expand-lg p-0 navbar-light " style="background-color:rgba(21,20,21,0.8); z-index: 99999;">
+            <nav class="navbar navbar-expand-lg p-0 navbar-light " style="background-color:rgba(21,20,21,0.8); z-index: 99999; border-bottom: 1px solid #C4A835;">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                   <span><i class="fas fa-bars fa-2x"></i></span>
@@ -99,22 +112,22 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <!-- 寬度設為60% -->
-                    <ul class="navbar-nav d-flex justify-content-around align-items-center mx-auto" style="width: 60%;">
+                    <ul class="navbar-nav d-flex justify-content-around align-items-center mx-auto" style="width: 60%">
                         <!-- 每個item都+下拉式選單類別 -->
                         <!-- logo -->
                         <a class="" href="index.html"><img src="img/03-icon/logo.png" style="max-width:120px; height:auto;" alt=""></a>
                         <li class="nav-item">
-                            <a class="nav-link text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                            <a class="nav-link text-center nav-textColor" href="movie.html" id="navbarDropdownMenuLink">
                                 電影介紹
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                            <a class="nav-link  text-center nav-textColor" href="member.html" id="navbarDropdownMenuLink">
                                 卡友專區
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  text-center nav-textColor" href="#" id="navbarDropdownMenuLink">
+                            <a class="nav-link  text-center nav-textColor" href="cinema.html" id="navbarDropdownMenuLink">
                                 戲院介紹
                             </a>
                         </li>
@@ -125,8 +138,8 @@
                             </a>
                             <div class="dropdown-menu" style=" background-color:#151415 ;" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item nav-textColor" href="https://www.facebook.com/pages/category/Movie-Theater/%E5%BD%B0%E5%8C%96%E5%A4%A7%E6%88%B2%E9%99%A2-1374522819332474/"
-                                    target="_blank">Facebook</a>
-                                <a class="dropdown-item nav-textColor" href="http://www.twcinema.com.tw/index.html" target="_blank">台灣大戲院</a>
+                                    target="_blank" style="border: 1px solid #C4A835;">Facebook</a>
+                                <a class="dropdown-item nav-textColor" href="http://www.twcinema.com.tw/index.html" target="_blank" style="border: 1px solid #C4A835;">台灣大戲院</a>
                             </div>
                         </li>
                     </ul>

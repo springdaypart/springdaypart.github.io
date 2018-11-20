@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/moviedetail.css">
     <link rel="stylesheet" href="style/bootstrap-4.1.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/fontawesome-free-5.5.0-web/fontawesome-free-5.5.0-web/css/all.min.css">
     <link rel="stylesheet" href="style/swiper-4.4.2/swiper-4.4.2/dist/css/swiper.min.css">
     <link rel="stylesheet" href="style/bootstrap-4.1.1-dist/css/bootstrap.min.css.map">
+
     <title>Document</title>
 </head>
 
 <body>
-    <!-- 卡友專區 -->
-    <div id="cinema-member">
-       <!-- 快速訂票區域 -->
+    <div id="all">
+        <!--影片詳細介紹-->
+        <div id="movie-detail">
+           <!-- 快速訂票區域 -->
        <div class="quick-booking-wrap">
         <!-- 快速訂票按鈕 -->
         <div class="quick-booking">
@@ -124,25 +128,108 @@
 </div>
 
 
-        <!-- 會員內容範圍 -->
-        <div class="cinema-member-content ">
-            <div class="content-title">
-                <h2>會員申辦方式</h2>
-            </div>
-            <div class="row no-gutters member-wrap mx-auto" style="box-shadow:0px 0px 80px white;">
-                <div class="col-12 col-lg-12 mb-2 mb-lg-0 "><img id="member-img1" class="member-img" src="img/member area-13.png" alt=""></div>
-                <div class="col-12 d-lg-none mb-2 mb-lg-0"><img class="member-img" src="img/member area-17.png" alt=""></div>
-                <div class="col-12 col-lg-6 mb-2 mb-lg-0"><img class="member-img" src="img/member area-14.png" alt=""></div>
-                <div class="col-12 col-lg-6 mb-4 mb-lg-0"><img class="member-img" src="img/member area-15.png" alt=""></div>
+            <!-- 電影介紹頁面 -->
+            <div class="movie-detail-content mx-auto">
+                <!-- A部分 -->
+                <div class="movie-detail-partA pt-3">
+                    <!-- A部分內容 -->
+                    <div class="detail-partA-content  row flex-lg-nowrap m-0 ">
+                        <!-- 海報 -->
+                        <img class="movie-poster-img m-lg-0 mx-auto  " src="img/01-poster/01-movie/already/dear ex-01.jpg"
+                            alt="">
+                        <!-- 細項說明 -->
+                        <div class="detail-partA-text mx-auto mt-lg-0 mt-4 col-lg-7 col-12">
+                            <!-- 第一段 純文字 -->
+                            <div class="detail-partA-title d-flex align-items-end mb-2">
+                                <h2 class="m-0 ">誰先愛上他的</h2><span>Dear EX</span>
+                            </div>
+                            <div class="detail-partA-type d-flex flex-wrap">
+                                <p class="w-50 m-0 mb-3 pr-4">類型：劇情、喜劇</p>
+                                <p class="w-50 m-0 mb-3 pr-4">片名：誰先愛上他的</p>
+                                <p class="w-50 m-0 mb-3 pr-4">導演：徐譽庭、許智彥</p>
+                                <p class="w-50 m-0 mb-3 pr-4">片長：1小時40分</p>
+                                <p class="w-50 m-0 mb-3 pr-4">主演：邱澤、謝盈萱、黃聖球</p>
+                                <p class="w-50 m-0 mb-3 pr-4">上映日期：熱映中</p>
+                            </div>
+
+                            <!-- 第二段 劇照 -->
+                            <div class="detail-partA-title mt-5">
+                                <h3>劇照</h3>
+                            </div>
+                            <div class="detail-partA-photo ">
+                                <!-- Swiper -->
+                                <div class="swiper-container position-relative">
+                                    <div class="swiper-wrapper ">
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/already/dear ex/stills-01.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/already/dear ex/stills-02.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/already/dear ex/stills-03.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/already/dear ex/stills-04.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/already/dear ex/stills-05.jpg"
+                                                alt=""></div>
+                                        <div class="swiper-slide"><img class="mw-100" src="img/01-poster/02-photo/already/dear ex/stills-06.jpg"
+                                                alt=""></div>
+
+                                    </div>
+                                    <!-- Add Arrows -->
+                                    <i class="fas fa-angle-right fa-3x arrow-left"></i>
+                                    <i class="fas fa-angle-left  fa-3x arrow-right"></i>
+                                    <!-- Add Pagination -->
+                                    <!-- <div class="swiper-pagination"></div> -->
+                                </div>
+                            </div>
+
+
+                            <!-- 第三段 時刻表 -->
+                            <div class="detail-partA-title mt-5">
+                                <h3>時刻表</h3>
+                            </div>
+                            <div class="detail-partA-time-wrap row">
+                                <div class="col-2">
+                                    <div class="mb-3 text-center">平日</div>
+                                    <div class="text-center">假日</div>
+                                </div>
+                                <div class="detail-partA-time col-10 d-flex flex-wrap">
+                                    <div class="partA-time mb-3 text-center"><span>12:40</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>13:50</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>15:00</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>16:10</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>17:20</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>18:30</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>19:40</span></div>
+                                    <div class="partA-time mb-3 text-center"><span>20:50</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+
+                <!-- B部分內容 -->
+                <div class="movie-detail-partB">
+                    <div class="detail-partB-title mt-4">
+                        <h3>劇情簡介</h3>
+                    </div>
+                    <p>金鐘名導徐譽庭與導演許智彥聯合執導，一部顯露豐盈溫潤人性厚度的家常喜劇。媽媽三蓮為家付出一切，可怎樣也無法忍受外遇的亡夫竟把保險理賠金留給外人，還是個男人！她叛逆兒子也窩裡反，倒陣入宿那男人家。
+
+                    </p>
+                    <div class="embed-responsive embed-responsive-16by9 mb-5">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/P7z9xOxsWhM"></iframe>
+                    </div>
+                </div>
             </div>
 
 
-        </div>
-        <div class="cinema-footer">
-            <p>業成資訊有限公司-春日部防衛隊。COPYRIGHT©2018</p>
+            <!-- footer -->
+            <div class="cinema-footer">
+                <p>業成資訊有限公司-春日部防衛隊。COPYRIGHT©2018</p>
+            </div>
         </div>
     </div>
-
 
     <!-- <script src="js/jquery-3.3.1.min.js"></script>
     <script src="style/bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
@@ -156,10 +243,43 @@
         crossorigin="anonymous"></script>
 
     <script src="style/swiper-4.4.2/swiper-4.4.2/dist/js/swiper.min.js"></script>
-
     <!-- 訂票的 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="js/booking.js"> </script>
+    <script src="js/booking.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            // init: false,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                990: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                450: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                },
+
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+    </script>
+
 </body>
+
+
 
 </html>

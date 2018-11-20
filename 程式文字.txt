@@ -1,6 +1,0 @@
-#home-tab.active{
-        font-size: 30px;
-    }
-#profile-tab.active{
-        font-size: 30px;
-    }
